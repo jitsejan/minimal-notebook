@@ -9,7 +9,7 @@ python = "^3.9"
 boto3 = "^1.17.110"
 jupyter-contrib-nbextensions = "^0.5.1"
 jupyter_nbextensions_configurator = "^0.4.1"
-s3contents = "^0.6.3"
+s3contents = "0.6.0"
 
 [tool.poetry.dev-dependencies]
 

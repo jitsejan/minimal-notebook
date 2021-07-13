@@ -1,0 +1,14 @@
+version: '3'
+services:
+  minimal-notebook:
+    user: root
+    privileged: true
+    image: jitsejan/minimal-notebook
+    restart: always
+    volumes:
+      - ./notebooks:/opt/notebooks
+      - ./data:/opt/data
+    environment:
+      - GRANT_SUDO=yes
+    ports:
+      - "8558:8558"

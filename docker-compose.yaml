@@ -6,9 +6,9 @@ services:
     image: jitsejan/minimal-notebook
     restart: always
     volumes:
-      - ./notebooks:/opt/notebooks
+      - ./notebooks:/home/jovyan/work
       - ./data:/opt/data
     environment:
       - GRANT_SUDO=yes
     ports:
-      - "8558:8558"
+      - "8558:5006"

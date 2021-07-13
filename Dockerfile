@@ -14,7 +14,7 @@ USER $NB_USER
 # Update Conda
 RUN conda update --all
 # Install Python requirements
-COPY pyproject.toml /home/jovyan/
+COPY poetry.lock pyproject.toml /home/jovyan/
 WORKDIR /home/jovyan
 RUN pip3 install poetry
 RUN poetry config virtualenvs.create false

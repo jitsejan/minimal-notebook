@@ -1,14 +1,15 @@
 version: '3'
 services:
   minimal-notebook:
-    user: root
-    privileged: true
     image: jitsejan/minimal-notebook
     restart: always
     volumes:
-      - ./notebooks:/opt/notebooks
+      - ./notebooks:/home/jovyan/work
       - ./data:/opt/data
     environment:
       - GRANT_SUDO=yes
+      - MINIO_URL=${MINIO_URL}
+      - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}
+      - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}
     ports:
-      - "8558:8558"
+      - "8558:5006"

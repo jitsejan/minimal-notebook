@@ -26,4 +26,4 @@ COPY custom/custom.css /home/jovyan/.jupyter/custom/
 RUN jupyter contrib nbextension install --user
 RUN jupyter nbextensions_configurator enable --user
 # Run the notebook
-CMD ["/opt/conda/bin/jupyter", "notebook", "--allow-root"]
+CMD ["/opt/conda/bin/jupyter", "notebook"]
